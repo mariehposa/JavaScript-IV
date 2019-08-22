@@ -93,7 +93,7 @@ var truck = new Truck(2, 'Toyota')
 */
 
 //Task 1
-class Person {
+class Persons {
     constructor(name, age) {
       this.name = name;
       this.age = age;
@@ -112,7 +112,7 @@ class Person {
 			this.stomach = [] 
 		}	
 }
-const mariam = new Person("Mariam", 23)
+var mariam = new Persons("Mariam", 23)
 mariam.eat('rice');
 console.log(mariam);
 console.log(mariam.greet());
@@ -142,7 +142,7 @@ class Car {
 var myCar = new Car('YC', 'BMW');
 
 //Task 3
-class Baby extends Person{
+class Baby extends Persons{
   constructor(name, age, toy) {
     super(name, age)
     this.toy = toy;
