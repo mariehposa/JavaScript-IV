@@ -24,3 +24,33 @@ class Instructor extends Person{
         console.log(`${student.name} receives a perfect score on ${subject}`);
     }
 }
+
+class Student extends Person{
+    constructor(object){
+        super(object);
+        this.previousBackground = object.previousBackground;
+        this.className = object.className;
+        this.favSubjects = object.favSubjects;
+        this.listsSubjects = object.listsSubjects;
+    }
+    PRAssignment(subject){
+        console.log(`${this.name} has submitted a PR for ${subject}`)
+    }
+    sprintChallenge(){
+        console.log(`${this.name} has begun sprint challenge on ${subject}`)
+    }
+}
+
+class ProjectManager extends Instructor{
+    constructor(object){
+        this.gradClassName = object.gradClassName;
+        this.favInstructor = object.favInstructor;
+    }
+    standUp(channel){
+        console.log(`${this.name} announces to ${channel}, @channel standy times!`)
+    }
+    debugsCode(student, subject){
+        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`)
+    }
+}
+
