@@ -119,3 +119,25 @@ console.log(mariam);
 console.log(mariam.greet());
 mariam.poop();
 console.log(mariam);
+
+class Car {
+	constructor(model, carMake) {
+		this.model = model;
+		this.carMake = carMake;
+		this.odometer = 0;
+		this.crashed = false;
+	}
+	drive(distance) {
+		if (this.crashed)
+			return `I crashed at ${this.odometer} miles!`;
+		this.odometer += Number(distance);
+		return `I did not crash and i am at ${this.odometer} miles now`;
+	}
+	crash() {
+		this.crashed = true;
+	}
+	repair() { this.crashed = false; }
+}
+
+var myCar = new Car('YC', 'BMW');
+
