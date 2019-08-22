@@ -90,8 +90,9 @@ var truck = new Truck(2, 'Toyota')
 */
 /*
 2. Your goal is to refactor all of this code to use ES6 Classes. The console.log() statements should still return what is expected of them.
-
 */
+
+//Task 1
 class Person {
     constructor(name, age) {
       this.name = name;
@@ -109,10 +110,8 @@ class Person {
 
 		poop() { 
 			this.stomach = [] 
-		}
-		
+		}	
 }
-
 const mariam = new Person("Mariam", 23)
 mariam.eat('rice');
 console.log(mariam);
@@ -120,6 +119,7 @@ console.log(mariam.greet());
 mariam.poop();
 console.log(mariam);
 
+//Task 2
 class Car {
 	constructor(model, carMake) {
 		this.model = model;
@@ -141,3 +141,12 @@ class Car {
 
 var myCar = new Car('YC', 'BMW');
 
+//Task 3
+class Baby extends Person{
+  constructor(name, age, toy) {
+    super(name, age)
+    this.toy = toy;
+  }
+  play() { return `I love to play with ${this.toy} and I am ${this.age} years old...`; }
+}
+var mine = new Baby('Mine', 3, 'train')
