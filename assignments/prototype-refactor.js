@@ -19,6 +19,10 @@ Person.prototype.poop = function () {
   this.stomach = [] 
 }
 
+Person.prototype.greet = function	(){
+  return (`My name is ${this.name} and I am ${this.age}`)
+}
+
 const mariam = new Person("Mariam", 23)
 
 mariam.eat('rice')
@@ -84,9 +88,34 @@ Truck.prototype.refill = function (litres) { this.tankLevel += Number(litres)}
 
 var truck = new Truck(2, 'Toyota')
 */
-
-
 /*
 2. Your goal is to refactor all of this code to use ES6 Classes. The console.log() statements should still return what is expected of them.
 
 */
+class Person {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+      this.stomach = [];
+    }
+
+    eat(edible) {
+    	this.stomach.push(edible)
+		}
+
+		greet(){
+			return (`My name is ${this.name} and I am ${this.age}`)
+		}
+
+		poop() { 
+			this.stomach = [] 
+		}
+		
+}
+
+const mariam = new Person("Mariam", 23)
+mariam.eat('rice');
+console.log(mariam);
+console.log(mariam.greet());
+mariam.poop();
+console.log(mariam);
